@@ -1,0 +1,103 @@
+{
+  "report_version": "1",
+  "created_at": "2026-09-09T18:43:56.356647+00:00",
+  "snapshot_id": "a6743399f4c5f45a085d1d66fb259e8d81d10846afb84906f357021446ead276",
+  "head": "dc79b86085f2534261b3421c77ffb8cb380f2197",
+  "mode": "worktree",
+  "provider": "demo",
+  "model": "deterministic-rules",
+  "status": "demo",
+  "summary": "DEMO ONLY: deterministic eval/interpolated-SQL pattern checks; no LLM was called.",
+  "findings": [
+    {
+      "path": "customers.py",
+      "line": 2,
+      "side": "new",
+      "severity": "high",
+      "confidence": 0.8,
+      "title": "Review interpolated SQL execution",
+      "description": "This added line interpolates values into SQL. If a value is caller-controlled, it can alter the SQL statement. Confirm its source.",
+      "suggestion": "Use bound query parameters supported by the database driver.",
+      "evidence": "return db.execute(f\"SELECT id FROM customers WHERE email = '{email}'\")"
+    },
+    {
+      "path": "pricing.py",
+      "line": 5,
+      "side": "new",
+      "severity": "high",
+      "confidence": 0.8,
+      "title": "Review dynamic expression evaluation",
+      "description": "This added line evaluates a string as code. If the expression is caller-controlled, a caller can execute code in this process. Confirm its source.",
+      "suggestion": "Replace eval with a constrained parser or an explicit operation allowlist.",
+      "evidence": "return eval(expression)"
+    }
+  ],
+  "rejected_findings": [],
+  "coverage": {
+    "changed_files": 2,
+    "reviewed_files": [
+      "customers.py",
+      "pricing.py"
+    ],
+    "skipped": [],
+    "context_chars": 1347,
+    "redactions": 0,
+    "scope": "Changed hunks plus 8 surrounding lines; no full-repository analysis."
+  },
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0
+  },
+  "elapsed_seconds": 0.001,
+  "limitations": [
+    "Location and evidence validation does not prove a finding is correct.",
+    "No code or project tests were executed. A clean report is not approval to merge."
+  ],
+  "stale": false,
+  "accounting": {
+    "conversation_id": "WEB-123",
+    "event_id": "5cc2f93d-da2e-4c30-bf18-5b4e1ba04738",
+    "usage_origin": "agent_provider_response",
+    "cost": {
+      "estimated_usd": "0",
+      "basis": "No remote model charge for this event; local compute/subscription costs excluded."
+    },
+    "tracking_enabled": true
+  },
+  "cache": {
+    "hit": false
+  },
+  "requirements": {
+    "sources": [
+      {
+        "kind": "jira",
+        "id": "WEB-123",
+        "title": "DEMO: Safe pricing and customer lookup",
+        "url": "https://example.invalid/jira/WEB-123",
+        "source_version": "synthetic-1",
+        "retrieved_at": "2026-09-09T18:41:10.208724+00:00",
+        "truncated": false
+      },
+      {
+        "kind": "confluence",
+        "id": "42",
+        "title": "DEMO: Input validation requirements",
+        "url": "https://example.invalid/confluence/42",
+        "source_version": "synthetic-1",
+        "retrieved_at": "2026-09-09T18:41:10.208784+00:00",
+        "truncated": false
+      },
+      {
+        "kind": "slack",
+        "id": "CDEMO:1",
+        "title": "DEMO: Team decision",
+        "url": "https://example.invalid/slack/thread",
+        "source_version": "synthetic-1",
+        "retrieved_at": "2026-09-09T18:41:10.208813+00:00",
+        "truncated": false
+      }
+    ],
+    "omitted": [],
+    "incomplete": false
+  }
+}

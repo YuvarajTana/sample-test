@@ -1,0 +1,28 @@
+# Pass this file explicitly with --config. Reviewed repositories cannot change provider policy.
+[review]
+provider = "ollama"
+model = "qwen2.5-coder:7b"
+base_url = "http://127.0.0.1:11434"
+allow_remote = false
+max_files = 20
+max_file_bytes = 200000
+max_context_chars = 32000
+max_output_tokens = 4096
+timeout_seconds = 180
+# Defaults already exclude .env*, private keys, dependencies, build output, and common lockfiles.
+# Tests are included. Add organization-specific sensitive paths here.
+exclude = ["fixtures/customer-data/**", "exports/**"]
+
+# CLI defaults to ~/.local/share/review-agent/usage.sqlite3 when usage_db is empty.
+usage_db = ""
+# Set an explicit absolute path after populating your account/model rate card.
+pricing_file = ""
+# Optional immutable requirements bundle fetched by the work-context command.
+work_context = ""
+max_calls_per_conversation = 25
+# Optional: guards estimated spend for this agent's calls, not your entire editor bill.
+# max_conversation_usd = 0.50
+# Opt in to storing validated review results (including evidence excerpts) locally.
+review_cache_seconds = 0
+# Keep metered for a proxy/cloud endpoint. Select local only when inference actually runs locally.
+billing_mode = "metered"

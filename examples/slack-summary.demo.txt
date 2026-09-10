@@ -1,0 +1,8 @@
+Code review summary
+Status: demo
+DEMO ONLY: deterministic eval/interpolated-SQL pattern checks; no LLM was called.
+• HIGH: Review interpolated SQL execution (customers.py:2)
+• HIGH: Review dynamic expression evaluation (pricing.py:5)
+Skipped files: 0
+This call estimated USD: 0
+Human review required. Generated draft only; nothing was posted.

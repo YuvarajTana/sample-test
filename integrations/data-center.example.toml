@@ -1,0 +1,26 @@
+[bitbucket]
+deployment = "data-center"
+base_url = "https://bitbucket.YOUR_COMPANY.example"
+project = "WEB"
+repo = "YOUR_REPOSITORY_SLUG"
+auth = "bearer"
+token_env = "BITBUCKET_TOKEN"
+
+[jira]
+deployment = "data-center"
+base_url = "https://jira.YOUR_COMPANY.example"
+auth = "bearer"
+token_env = "JIRA_TOKEN"
+extra_fields = []
+
+[confluence]
+deployment = "data-center"
+# Include your installation's context path, if any, e.g. /confluence.
+base_url = "https://confluence.YOUR_COMPANY.example"
+auth = "bearer"
+token_env = "CONFLUENCE_TOKEN"
+
+[slack]
+base_url = "https://slack.com/api"
+auth = "bearer"
+token_env = "SLACK_TOKEN"

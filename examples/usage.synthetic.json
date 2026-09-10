@@ -1,0 +1,12 @@
+{
+  "event_id": "synthetic-demo-001",
+  "conversation": "WEB-123",
+  "provider": "openai",
+  "model": "synthetic",
+  "usage": {
+    "input_tokens": 1000,
+    "cached_input_tokens": 400,
+    "output_tokens": 200,
+    "reasoning_output_tokens": 50
+  }
+}

@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lakshya-review-agent"
+version = "0.2.0"
+description = "Local Git code review engine with LLM adapters and stdio MCP"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.scripts]
+review-agent = "review_agent.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["review_agent*"]

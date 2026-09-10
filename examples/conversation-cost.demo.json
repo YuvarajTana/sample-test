@@ -1,0 +1,102 @@
+{
+  "currency": "USD",
+  "scope": "Recorded events only; not all editor activity or subscription billing.",
+  "conversations": [
+    {
+      "conversation": "WEB-123",
+      "events": [
+        {
+          "id": "5cc2f93d-da2e-4c30-bf18-5b4e1ba04738",
+          "conversation": "WEB-123",
+          "created_at": "2026-09-09T18:43:56.356116+00:00",
+          "operation": "review",
+          "provider": "demo",
+          "model": "qwen2.5-coder:7b",
+          "status": "demo",
+          "origin": "agent",
+          "usage": {
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "cache_write_5m_tokens": 0,
+            "cache_write_1h_tokens": 0,
+            "reasoning_output_tokens": 0
+          },
+          "cost": {
+            "estimated_usd": "0",
+            "basis": "No remote model charge for this event; local compute/subscription costs excluded."
+          },
+          "context_chars": 5091,
+          "elapsed": 0.07895024200115586
+        },
+        {
+          "id": "915c0eb4-67e0-46c3-a723-9e4ddfcf039c",
+          "conversation": "WEB-123",
+          "created_at": "2026-09-09T18:43:56.628522+00:00",
+          "operation": "review",
+          "provider": "demo",
+          "model": "qwen2.5-coder:7b",
+          "status": "cache_hit",
+          "origin": "agent",
+          "usage": {
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "cached_input_tokens": 0
+          },
+          "cost": {
+            "estimated_usd": "0",
+            "basis": "Exact review-result cache hit; no provider request."
+          },
+          "context_chars": 0,
+          "elapsed": 0.0
+        },
+        {
+          "id": "synthetic-demo-001",
+          "conversation": "WEB-123",
+          "created_at": "2026-09-09T18:43:56.866610+00:00",
+          "operation": "import",
+          "provider": "openai",
+          "model": "synthetic",
+          "status": "imported",
+          "origin": "imported",
+          "usage": {
+            "input_tokens": 1000,
+            "output_tokens": 200,
+            "cached_input_tokens": 400,
+            "cache_write_input_tokens": 0,
+            "cache_write_5m_tokens": 0,
+            "cache_write_1h_tokens": 0,
+            "reasoning_output_tokens": 50
+          },
+          "cost": {
+            "estimated_usd": "0.0030",
+            "basis": "Observed tokens \u00d7 configured USD rates; not an invoice.",
+            "rate": {
+              "provider": "openai",
+              "model": "synthetic",
+              "input_usd_per_million": 2,
+              "cached_input_usd_per_million": 0.5,
+              "output_usd_per_million": 8,
+              "source": "Synthetic demonstration values; never use for real billing",
+              "effective_date": "2026-09-09"
+            }
+          },
+          "context_chars": 0,
+          "elapsed": 0.0
+        }
+      ],
+      "known_estimated_usd": "0.0030",
+      "unknown_cost_events": 0,
+      "input_tokens_observed": 1000,
+      "output_tokens_observed": 200,
+      "cached_input_tokens_observed": 400,
+      "usage_missing_events": 0,
+      "cache_hits": 1,
+      "cost_complete_for_recorded_events": true,
+      "recommendations": [
+        "Use the existing editor model or local Ollama for the first pass; reserve a second cloud review for higher-risk changes."
+      ]
+    }
+  ]
+}

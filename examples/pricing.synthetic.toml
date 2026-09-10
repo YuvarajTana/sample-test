@@ -1,0 +1,9 @@
+# SYNTHETIC DEMONSTRATION RATES. These are not OpenAI prices.
+[[rates]]
+provider = "openai"
+model = "synthetic"
+input_usd_per_million = 2
+cached_input_usd_per_million = 0.5
+output_usd_per_million = 8
+source = "Synthetic demonstration values; never use for real billing"
+effective_date = "2026-09-09"

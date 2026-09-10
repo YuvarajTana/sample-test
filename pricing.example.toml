@@ -1,0 +1,20 @@
+# No real model prices are assumed. Unmatched/missing rates produce UNKNOWN cost, not zero.
+rates = []
+
+# Replace the empty rates declaration above with entries populated from your actual provider
+# pricing or negotiated contract. Numeric prices are USD per one million tokens.
+# Record an effective date and source. Review rates when model IDs or pricing change.
+#
+# [[rates]]
+# provider = "openai"
+# model = "YOUR_EXACT_MODEL_ID"
+# input_usd_per_million = <YOUR_PRICE>
+# cached_input_usd_per_million = <YOUR_PRICE>
+# output_usd_per_million = <YOUR_PRICE>
+# source = "https://your-provider-pricing-page-or-contract-reference"
+# effective_date = "YYYY-MM-DD"
+#
+# Anthropic cache-writing usage can require additional prices:
+# cache_write_5m_usd_per_million = <YOUR_PRICE>
+# cache_write_1h_usd_per_million = <YOUR_PRICE>
+# cache_write_usd_per_million = <YOUR_PRICE_FOR_UNSPECIFIED_WRITE_TTL>

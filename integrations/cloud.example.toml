@@ -1,0 +1,33 @@
+# Keep this config local; credentials are read only from named environment variables.
+[bitbucket]
+deployment = "cloud"
+base_url = "https://api.bitbucket.org/2.0"
+workspace = "YOUR_WORKSPACE"
+repo = "YOUR_REPOSITORY_SLUG"
+# API token: basic with Atlassian email. Repository/workspace/OAuth access token: bearer.
+auth = "basic"
+token_env = "BITBUCKET_TOKEN"
+username_env = "BITBUCKET_EMAIL"
+
+[jira]
+deployment = "cloud"
+base_url = "https://YOUR_SITE.atlassian.net"
+web_url = "https://YOUR_SITE.atlassian.net"
+auth = "basic"
+token_env = "JIRA_TOKEN"
+username_env = "JIRA_EMAIL"
+# If acceptance criteria live in a custom field, include its ID here.
+extra_fields = []
+
+[confluence]
+deployment = "cloud"
+base_url = "https://YOUR_SITE.atlassian.net/wiki"
+web_url = "https://YOUR_SITE.atlassian.net/wiki"
+auth = "basic"
+token_env = "CONFLUENCE_TOKEN"
+username_env = "CONFLUENCE_EMAIL"
+
+[slack]
+base_url = "https://slack.com/api"
+auth = "bearer"
+token_env = "SLACK_TOKEN"

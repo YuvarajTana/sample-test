@@ -1,0 +1,40 @@
+{
+  "work_context_version": "1",
+  "bitbucket_pin": null,
+  "trust": "Synthetic demo content, not company data.",
+  "documents": [
+    {
+      "kind": "jira",
+      "id": "WEB-123",
+      "title": "DEMO: Safe pricing and customer lookup",
+      "text": "Customer lookup must use bound SQL parameters. Discount input must never execute as Python code.",
+      "url": "https://example.invalid/jira/WEB-123",
+      "source_version": "synthetic-1",
+      "retrieved_at": "2026-09-09T18:41:10.208724+00:00",
+      "truncated": false,
+      "redactions": 0
+    },
+    {
+      "kind": "confluence",
+      "id": "42",
+      "title": "DEMO: Input validation requirements",
+      "text": "Reject invalid discount expressions. Keep database query structure independent from user-provided email values.",
+      "url": "https://example.invalid/confluence/42",
+      "source_version": "synthetic-1",
+      "retrieved_at": "2026-09-09T18:41:10.208784+00:00",
+      "truncated": false,
+      "redactions": 0
+    },
+    {
+      "kind": "slack",
+      "id": "CDEMO:1",
+      "title": "DEMO: Team decision",
+      "text": "Keep the review read-only. A developer will inspect proposed changes and run tests before merging.",
+      "url": "https://example.invalid/slack/thread",
+      "source_version": "synthetic-1",
+      "retrieved_at": "2026-09-09T18:41:10.208813+00:00",
+      "truncated": false,
+      "redactions": 0
+    }
+  ]
+}
